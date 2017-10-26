@@ -13,3 +13,6 @@ def mirror():                                           #mirroring function
 U_input = str(input("Enter the string: "))
 
 mirror()
+
+
+### Time Complexity (queue): O(n) ###
