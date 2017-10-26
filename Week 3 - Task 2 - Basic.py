@@ -21,3 +21,5 @@ def linear():                                                           #perform
 
 Target = int(input("Enter the target: "))
 linear()
+
+###Time Complexity O(n)###
