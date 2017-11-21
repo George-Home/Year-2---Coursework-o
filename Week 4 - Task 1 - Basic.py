@@ -1,6 +1,7 @@
 sequenceb = [2,7,9,4,1,5,3,6,0,8]
 sequencei = [2,7,9,4,1,5,3,6,0,8]
 sequences = [2,7,9,4,1,5,3,6,0,8]
+
 ###Bubble Sort###
 def bubbleSort(sequenceb):                         #sequence is added into function otherwise it will keep changing the original each iteration
     print("Bubble Sort")
@@ -50,7 +51,10 @@ def selectionSort(sequences):
 
 selectionSort(sequences)
 
-
-
+#Bubble sort had 23 element moves
+#Insertion sort had 7 element moves
+#Selection sort had 8 element moves
+#Insertion is the best sorting method for these integers
+#the  worst configuration would be back to front - [9,8,7,6,5,4,3,2,1,0]
    
     
