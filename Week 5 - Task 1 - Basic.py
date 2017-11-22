@@ -44,6 +44,6 @@ if __name__ == '__main__':
       l.insert(None, Node(4))
       l.insert(l.head,Node(6))
       l.insert(l.head,Node(8))
-      l.insert(l.head,Node(8))
-      l.duplicate()
+      l.insert(l.head,Node(8))                              #duplicate node added for testing
+      l.duplicate()                                         #runs the duplicate remover before displaying the results and after node values have been inserted
       l.display()
