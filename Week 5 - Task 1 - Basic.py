@@ -34,7 +34,7 @@ class List(object):
             while n is not None:                            #checks that the current node has a value
                   while dupe.next is not None:              #checks if the next node has a value
                         if dupe.next.value == n.value:
-                              dupe.next = dupe.next.next    #if they match, the duplicate is removed
+                              dupe.next = dupe.next.next    #if they match, the duplicate is assigned as 'none' and thus removed
                         else:
                               dupe = dupe.next
                   n = dupe = n.next
