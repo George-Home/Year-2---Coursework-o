@@ -2,9 +2,10 @@ class graphy(object):
     adjacencyList = []
     def __init__(self, node):
         self.node = nodeValue
+        self.values = []
 
     def createGraph(nodes):         
-        l = []
+        l = graphy.values = []
         count = 0
         l.append(0)                 #0 is used to mark the next value as a new node - subsequent numbers are that nodes connections until next 0
         while count != nodes:       #counts up one node at a time
@@ -21,8 +22,8 @@ class graphy(object):
                 else:
                     l.append(int(connection))       #adds node connection value to a list
         l.pop()
-        print("The graph has been created successfully")
-        print(l)
+        #print("The graph has been created successfully")           #removed for unit test
+        #print(l)
         graphy.adjacencyList = l
         return graphy.adjacencyList
 
@@ -58,22 +59,21 @@ class graphy(object):
         for item in output:
             file.write("%s\n" % item)
         file.close()
-        print(queue)
-        print(output)
+        #print(queue)       #removed for unit test
+        #print(output)
         
     def isPath(v,w):
         n_graph = graphy.adjacencyList
         p = 0
-        h = 0
 
-        for i in range(len(n_graph)):
-            try:
-                if n_graph[p] == 0:
+        for i in range(len(n_graph)):           
+            try:                                        #try statement for when list value reaches out of bounds
+                if n_graph[p] == 0:                     #marker to indicate next value as a node
                     p = p + 1
-                    if n_graph[p] == v:
+                    if n_graph[p] == v:                 #finds given node
                         while n_graph[p] != 0 and n_graph[p] != []:
-                            if n_graph[p] == w:
-                                print("The nodes are connected")
+                            if n_graph[p] == w:                         #checks if node is connected to other given node
+                                #print("The nodes are connected")
                                 break
                             else:
                                 p = p + 1
@@ -84,6 +84,8 @@ class graphy(object):
                     p = p + 1
             except:
                 break
+
+        return True         #for unit test
         
 
 if __name__ == '__main__':
@@ -92,5 +94,7 @@ if __name__ == '__main__':
     nodes = int(input("How many nodes: "))
     graphy.createGraph(nodes)
     graphy.Bfs()
-    graphy.isPath(1,3)
+    graphy.isPath(1,3)                          #checks for path between node 1 and 3 - example
+                
+
                 
