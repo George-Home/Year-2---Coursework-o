@@ -1,7 +1,7 @@
-def palindrome():
+def palindrome(Input1):             #checks if a given input is a palindrome
+    
     i = 0
     j = -1
-    Input1 = [1,3,6,6,3,1]
 
     length = len(Input1)
     palindrome = False
@@ -11,12 +11,12 @@ def palindrome():
             i = i + 1                           #end - 1 and beg + 1
             j = j - 1
             if p == length/2:
-                print("This is a palindrome")
+                palindrome = True
                 break
 
         else:
-            print("not a palindrome")
             break
 
+    return palindrome
+
     
-palindrome()
