@@ -1,3 +1,4 @@
+
 def Armstrong_Chk (user_number):   #function to check if a given number is also an armstrong number
     
     Total = 0
